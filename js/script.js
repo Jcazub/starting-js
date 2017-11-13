@@ -139,3 +139,25 @@ var mySum = sumNums(923,13454);
  console.log(mySum);
 
  //Function delclaration, NOT EXPRESSIONS, are "hoisted" to the top of the document when compiled and read by the browser.
+
+var apollo = {
+  isDog: true,
+  breed: 'mutt',
+  legs: 4,
+  age: 2,
+  toys: ['Mrs. Moose', 'Bone', 'Half a Giraffe'],
+  speak: function() { //this is a method, a function that is a property of an object
+    console.log('woof woof');
+  },
+  sayHiTo: function(name, age) {
+    console.log('Hi ' + name + " woof woof! You're " + age);
+  }
+  //With functions that use multiple parameters the order matters, supply the parameters in the same order in which the arguments are listed where the function is defined
+};
+
+apollo.speak();
+
+apollo.sayHiTo('Stella',5);
+
+console.log(console);
+//The console object is a global object created within the browser, log is a method on that object.
